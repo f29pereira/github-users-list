@@ -10,6 +10,11 @@ Global CSS styles
 :root {
   /*Font*/
   --font-inconsolata: "Inconsolata", monospace;
+
+  /*Colors*/
+  --nav-blue: #03012d;
+  --white: #ffffff;
+  --btn-blue: #4455da;
 }
 
 html,
@@ -17,4 +22,8 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   font-family: var(--font-inconsolata);
+}
+
+ul {
+  list-style: none;
 }

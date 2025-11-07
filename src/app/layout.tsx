@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inconsolata } from "next/font/google";
 import "./globals.css";
+import Nav from "./components/Nav/Nav";
 
 const inconsolata = Inconsolata({
   variable: "--font-inconsolata",
@@ -19,7 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inconsolata.variable}`}>{children}</body>
+      <body className={`${inconsolata.variable}`}>
+        <Nav />
+        {children}
+      </body>
     </html>
   );
 }
