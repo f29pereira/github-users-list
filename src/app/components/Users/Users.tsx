@@ -9,7 +9,7 @@ import { FaGithub } from "../../icons/icons";
  *
  * Props are defined in {@link UsersProps}.
  */
-export default function Users({ userList }: UsersProps) {
+export default function Users({ userList, isDummy }: UsersProps) {
   return (
     <div className={`flex-col-center`}>
       {/*Header*/}
@@ -23,18 +23,26 @@ export default function Users({ userList }: UsersProps) {
       {userList?.map((user) => (
         <div key={user.id} className={`${styles.container} ${styles.user}`}>
           <div>
-            <img
-              className={styles.avatar}
-              src={user.avatar}
-              alt="User avatar"
-            />
+            {!isDummy ? (
+              <img
+                className={styles.avatar}
+                src={user.avatar}
+                alt="User avatar"
+              />
+            ) : (
+              <div className={styles.dummyAvatar}></div>
+            )}
           </div>
-          <div>{user.name}</div>
+          <div>
+            <span className={styles.name}>{user.name}</span>
+          </div>
           <div>
             <a
               href={user.url}
               target="_blank"
-              className={`flex-center ${styles.profileCont}`}
+              className={`flex-center  
+                ${isDummy ? styles.dummyProfile : styles.profileCont}`}
+              title={`${user.name} profile`}
             >
               <FaGithub className={styles.gitHubIcon} />
             </a>

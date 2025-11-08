@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 /**
  * GitHubUser type
  * @property id - user id
@@ -14,8 +16,10 @@ export type GitHubUser = {
 
 /**
  * Props for the Users component
- * @property userList - list of users to be displayed on the table
+ * @property userList  - list of users to be displayed on the table
+ * @property isDummy   - indicates if users list if a dummy list
  */
 export type UsersProps = {
   userList: GitHubUser[];
+  isDummy: boolean;
 };

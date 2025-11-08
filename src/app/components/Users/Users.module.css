@@ -24,6 +24,7 @@ CSS Module for UsersTable component
 .user {
   background-color: var(--user);
   margin-bottom: 0.8rem;
+  min-height: 6rem;
 }
 
 .header,
@@ -32,15 +33,35 @@ CSS Module for UsersTable component
 }
 
 /*user profile image*/
-.avatar {
+.avatar,
+.dummyAvatar {
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
 
-/*user profile container*/
+/*user dummy profile image*/
+.dummyAvatar {
+  background-color: var(--loading);
+}
+
+/*user profile image and gitHub profile container*/
 .profileCont {
   background-color: var(--profile-link);
+}
+
+.profileCont:hover {
+  background-color: var(--profile-hover-link);
+}
+
+/*user profile container when loading data*/
+.dummyProfile {
+  background-color: var(--loading);
+  cursor: none;
+}
+
+.dummyProfile,
+.profileCont {
   color: var(--white);
   border-radius: 10px;
   padding: 0.5rem 1rem;
@@ -49,4 +70,38 @@ CSS Module for UsersTable component
 .gitHubIcon {
   width: 20px;
   height: 20px;
+}
+
+@media (min-width: 62.5rem /*1000px*/) {
+  /*header and users container*/
+  .container {
+    width: 60%;
+  }
+
+  /*users list header*/
+  .header {
+    font-size: 1.5rem;
+  }
+
+  /*user profile image*/
+  .avatar,
+  .dummyAvatar {
+    width: 65px;
+    height: 65px;
+  }
+
+  /*user name*/
+  .name {
+    font-size: 1.2rem;
+  }
+
+  /*user profile container*/
+  .profileCont {
+    padding: 1rem 1.2rem;
+  }
+
+  .gitHubIcon {
+    width: 25px;
+    height: 25px;
+  }
 }
