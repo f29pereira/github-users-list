@@ -1,5 +1,5 @@
 import styles from "./Users.module.css";
-import { UserTableProps } from "@/app/types";
+import { UsersProps } from "@/app/types";
 import { FaGithub } from "../../icons/icons";
 
 /**
@@ -7,9 +7,9 @@ import { FaGithub } from "../../icons/icons";
  * - Header
  * - Users info with: Avatar image, Name and GitHub profile Link
  *
- * Props are defined in {@link UserTableProps}.
+ * Props are defined in {@link UsersProps}.
  */
-export default function Users({ userList }: UserTableProps) {
+export default function Users({ userList }: UsersProps) {
   return (
     <div className={`flex-col-center`}>
       {/*Header*/}
