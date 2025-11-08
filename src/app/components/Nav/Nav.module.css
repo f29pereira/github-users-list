@@ -1,0 +1,33 @@
+/*
+CSS module for Nav component
+*/
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--nav-blue);
+  color: var(--white);
+  padding: 1.5rem 0;
+}
+
+/*nav logo container*/
+.logoCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+/*gitHub logo*/
+.logo {
+  width: 2rem;
+  height: 2rem;
+}
+
+/*nav text*/
+.text {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
