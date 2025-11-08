@@ -15,6 +15,8 @@ Global CSS styles
   --nav-blue: #03012d;
   --white: #ffffff;
   --btn-blue: #4455da;
+  --profile-link: #4455da;
+  --user: #f5f7ff;
 }
 
 html,
@@ -26,4 +28,24 @@ body {
 
 ul {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*Centered flex row container*/
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Centered flex column container*/
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
